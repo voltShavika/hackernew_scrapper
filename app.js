@@ -145,7 +145,7 @@ const fetchLatestNews = () => {
     });
 }
 
-const job = nodeCron.schedule("0 */2 * * * *", ()=> {
+const job = nodeCron.schedule("0 */15 * * * *", ()=> {
     console.log("Fetching Latest News at " + new Date().toLocaleString());
     fetchLatestNews()
 })
